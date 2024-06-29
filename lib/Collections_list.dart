@@ -1,8 +1,11 @@
 
 void main() {
-  collection_list();
-  collection_list_add();
-  collection_list_where();
+  // collection_list();
+  // collection_list_add();
+  // collection_list_where();
+  // collection_list_map();
+  // collection_list_reduce();
+  collection_list_fold();
 }
 
 void collection_list() {
@@ -36,4 +39,33 @@ void collection_list_where() {
 
   print(newList);
   print(newList.toList());
+}
+
+void collection_list_map() {
+  List<String> dayList = ['월', '화', '수', '목', '금', '토', '일'];
+
+  final newDayList = dayList.map(
+      (day) => '요일 $day', // 리스트의 모든 값 값에 '요일 ' 추가
+  );
+
+  // Iterable을 List로 다시 변환하고 싶을 때, .toList() 사용
+  print(newDayList.toList());
+}
+
+void collection_list_reduce() {
+  List<String> dayList = ['월', '화', '수', '목', '금', '토', '일'];
+
+  final allDays = dayList.reduce((value, element) => value + ', ' + element);
+
+  print(allDays);
+}
+
+void collection_list_fold() {
+  List<String> dayList = ['월', '화', '수', '목', '금', '토', '일'];
+
+  // reduce() 함수와 마찬가지로 각 요소를 순회하여 실행됩니다.
+  final allDays =
+      dayList.fold<int>(0, (value, element) => value + element.length);
+
+  print(allDays);
 }
