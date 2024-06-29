@@ -1,4 +1,6 @@
+import 'lib/comment.dart';
 
 void main() {
-  print('Hello');
+  print1();
+  // print('Hello');
 }
