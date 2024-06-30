@@ -39,4 +39,5 @@ void main() {
   // match: (String: 민지, int: 19) 출력
   switcher(('민지', 19));
   // no match
+  switcher(8);
 }
